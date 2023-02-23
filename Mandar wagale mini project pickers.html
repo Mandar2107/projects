@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COLOR PICKER</title>
+        <link rel="Stylesheet" href="pickern.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div id="picker" class="picker">
+            <div class="picker_box">
+                <h1 id="picker-title" class="picker_title">COLOR CODE</h1>
+                <div class="picker_inputs">
+                    <input type="text" id="input-output" class="picker_input picker_input-output">
+                    <input type="color" id="input-color" class="picker_input">
+            </div>
+          </div>
+        </div>
+        <script>
+            var colorInput=document.getElementById('input-color');
+            var outputInput=document.getElementById('input-output');
+            var pickerTitle=document.getElementById('picker-title');
+            var pickerBody=document.getElementById('picker');
+
+            function setCode(){
+                var color=colorInput.value;
+                outputInput.value=color;
+                pickerBody.style.backgroundColor=color;
+                pickerTitle.style.color=color;
+            }
+            colorInput.addEventListener('input',setCode)
+            setCode();
+        </script>
+    </body>
+</html>

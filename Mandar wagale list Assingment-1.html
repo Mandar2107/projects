@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>HTML List!</title>
+<style>
+        body{
+            background-color : rgb(52, 27, 166);
+            padding: 118px;
+            color : white;
+        }
+        h1{
+          color : orange;
+        }
+      ul li::before {
+      content: "\2022";
+      color: blue;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      }
+      ol {list-style: none; counter-reset: li}
+      li::before {
+        content: counter(li); 
+        color: blue;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+        counter-increment: li
+      }
+      h3{
+        color: rgb(100, 132, 227);
+        font-weight: bold;
+      }
+</style>
+</head>
+<body>
+<h1>HTML List</h1>
+<h3>Unordered List</h3>
+<p>Ordering doesn't matter!</p>
+<ul>
+<li>Milk</li>
+<li>Sugar</li>
+<li>Bread</li>
+</ul>
+<h3>Ordered List</h3>
+<p>Ordering doen't matter!</p>
+<ol>
+<li>Put the kettle on!</li>
+<li>Put the teabag in the cup</li>
+<li>Wait for kettle to boil</li>
+<li>Pour boiling water in the cup</li>
+</ol>
+</body>
+</html>
